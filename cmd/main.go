@@ -14,7 +14,7 @@ import (
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/logrusorgru/aurora"
-	"github.com/smithoss/gonymizer"
+	"github.com/rkuska/gonymizer"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

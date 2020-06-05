@@ -1,4 +1,4 @@
-module github.com/smithoss/gonymizer
+module github.com/rkuska/gonymizer
 
 go 1.13
 
