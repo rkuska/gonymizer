@@ -60,6 +60,20 @@ func TestProcessorAlphaNumericScrambler(t *testing.T) {
 	require.Equal(t, outputA, outputC)
 }
 
+func TestProcessorIBANScrambler(t *testing.T) {
+	input := "FR12345678900"
+	output1, err := ProcessorIBANScrambler(nil, input)
+	require.NoError(t, err)
+	require.NotEmpty(t, output1)
+	require.NotEqual(t, input, output1)
+
+	output2, err := ProcessorIBANScrambler(nil, input)
+	require.NoError(t, err)
+	require.NotEmpty(t, output2)
+	require.NotEqual(t, input, output2)
+	require.Equal(t, output1, output2)
+}
+
 func TestProcessorAddress(t *testing.T) {
 	output, err := ProcessorAddress(&cMap, "1234 Testing Lane")
 	require.Nil(t, err)
